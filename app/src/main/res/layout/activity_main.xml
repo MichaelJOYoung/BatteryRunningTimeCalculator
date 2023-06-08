@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp"
+tools:context=".MainActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Battery Running Time Calculator"
+    android:textSize="24sp"
+    android:textStyle="bold"/>
+
+<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Assuming the battery holds 9.8 kWhrs at 100% charge and will stop providing power at 5% to protect itself."
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Enter the Current Charge (as a percent):"/>
+
+<EditText
+    android:id="@+id/charge_percent_edittext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:max="100"
+    android:min="0"
+    android:textSize="24sp"
+    android:hint="Enter current charge"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expected Discharge Rate (in watts):" />
+
+<EditText
+    android:id="@+id/discharge_rate_edittext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:textSize="24sp"
+    android:hint="Enter discharge rate"/>
+
+<Button
+    android:id="@+id/calculate_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Calculate Running Time Remaining"/>
+
+<TextView
+    android:id="@+id/time_remaining_textview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:textColor="@android:color/holo_green_dark"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Assuming the battery holds 200 Ah at 100% charge and you will stop discharging at 5% to protect the pattery." />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the Current Charge (as Amp Hours)" />
+
+    <EditText
+        android:id="@+id/charge_amphours_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:max="200"
+        android:min="0"
+        android:textSize="24sp"
+        android:hint="Enter current charge"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expected Discharge Rate ( in Amps ):" />
+
+    <EditText
+        android:id="@+id/discharge_amps_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter current discharge rate"
+        android:inputType="number|numberDecimal"
+        android:max="200"
+        android:min="0"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/calculate_discharge_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Discharge Time Remaining" />
+
+    <TextView
+        android:id="@+id/discharge_time_remaining_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
