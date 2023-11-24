@@ -8,12 +8,12 @@ android:orientation="vertical"
 android:padding="16dp"
 tools:context=".MainActivity">
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Battery Running Time Calculator"
-    android:textSize="24sp"
-    android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Battery Running Time Calculator"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 <TextView
         android:layout_width="match_parent"
@@ -56,33 +56,49 @@ tools:context=".MainActivity">
     android:layout_height="wrap_content"
     android:text="Calculate Running Time Remaining"/>
 
-<TextView
-    android:id="@+id/time_remaining_textview"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="24sp"
-    android:textStyle="bold"
-    android:textColor="@android:color/holo_green_dark"/>
+    <TextView
+        android:id="@+id/time_remaining_textview"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Assuming the batteries holds 460 Ah at 100% charge and you will stop discharging at 5% to protect the battery."
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Assuming the battery holds 200 Ah at 100% charge and you will stop discharging at 5% to protect the pattery." />
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter the Current Charge (as Amp Hours)" />
+        android:text="Enter the Total Maximum charge in Amp hours" />
+
+    <EditText
+        android:id="@+id/total_amphours_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Total Battery Amp Hours"
+        android:inputType="number"
+        android:max="500"
+        android:min="0"
+        android:text="460"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the Current Charge (in Amp Hours)" />
 
     <EditText
         android:id="@+id/charge_amphours_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:max="200"
+        android:max="500"
         android:min="0"
         android:textSize="24sp"
         android:hint="Enter current charge"/>
@@ -113,7 +129,8 @@ tools:context=".MainActivity">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
 </LinearLayout>
+
